@@ -16,6 +16,7 @@ $java\
 $julia\
 $nodejs\
 $nim\
+$nix_shell\
 $rust\
 [](fg:#89ABCE bg:#06969A)\
 $docker_context\
@@ -23,6 +24,9 @@ $docker_context\
 $time\
 [ ](fg:#33658A)\
 """
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
@@ -111,6 +115,11 @@ format = '[[ $symbol ($version) ](bg:#89ABCE)]($style)'
 symbol = " "
 style = "bg:#89ABCE"
 format = '[[ $symbol ($version) ](bg:#89ABCE)]($style)'
+
+[nix_shell]
+symbol = ""
+style = "bg:#89ABCE"
+format = '[[ $symbol $state ](bg:#89ABCE)]($style)'
 
 [rust]
 symbol = ""
